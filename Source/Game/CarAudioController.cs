@@ -67,7 +67,7 @@ public class CarAudioController : Script
         float RPM = Car.EngineRotationSpeed;
 
          // Calculate volume with a custom response curve
-        float normalizedRPM = RPM / 6000f;
+        float normalizedRPM = RPM / Car.Engine.MaxRotationSpeed;
         float volumeCurve = Mathf.Pow(normalizedRPM, VolumeResponseCurve);
         
         float finalVolume = Mathf.Clamp(
