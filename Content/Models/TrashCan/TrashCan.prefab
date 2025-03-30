@@ -1,0 +1,117 @@
+{
+	"ID": "08dd6ecb177821ce1dd0128497e8e15e",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6605,
+	"Data": [
+	{
+		"ID": "08dd6ecb17719c641dd0121b97e8dd3a",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "00000000000000000000000000000000",
+		"Name": "TrashCan"
+	},
+	{
+		"ID": "08dd6ecb1772184e1dd0121c97e8dd4d",
+		"TypeName": "FlaxEngine.RigidBody",
+		"ParentID": "08dd6ecb17719c641dd0121b97e8dd3a",
+		"Name": "LidRB",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 5.880027770996094,
+				"Z": 0.0
+			}
+		},
+		"Mass": 52.3294563293457
+	},
+	{
+		"ID": "08dd6ecb1773011d1dd0121c97e8dd51",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "08dd6ecb1772184e1dd0121c97e8dd4d",
+		"Name": "TrashCanLid",
+		"Transform": {
+			"Scale": {
+				"X": 0.699999988079071,
+				"Y": 0.699999988079071,
+				"Z": 0.699999988079071
+			}
+		},
+		"Model": "08dd6e159c9942f03e191be4ef0bedd6",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "08dd6e9a088e423309865de3bdbd6584",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "08dd6ecb1774fbe11dd0121c97e8dd54",
+		"TypeName": "FlaxEngine.MeshCollider",
+		"ParentID": "08dd6ecb1772184e1dd0121c97e8dd4d",
+		"Name": "MeshCollider",
+		"Transform": {
+			"Scale": {
+				"X": 0.699999988079071,
+				"Y": 0.699999988079071,
+				"Z": 0.699999988079071
+			}
+		},
+		"CollisionData": "08dd6e16a0281d7e414823a30ee2731e"
+	},
+	{
+		"ID": "08dd6ecb177571011dd0121d97e8dd59",
+		"TypeName": "FlaxEngine.RigidBody",
+		"ParentID": "08dd6ecb17719c641dd0121b97e8dd3a",
+		"Name": "CanRB",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 7.0,
+				"Z": 0.0
+			}
+		},
+		"Mass": 278.9148864746094
+	},
+	{
+		"ID": "08dd6ecb177684f01dd0121d97e8dd5d",
+		"TypeName": "FlaxEngine.MeshCollider",
+		"ParentID": "08dd6ecb177571011dd0121d97e8dd59",
+		"Name": "MeshCollider",
+		"Transform": {
+			"Scale": {
+				"X": 0.699999988079071,
+				"Y": 0.699999988079071,
+				"Z": 0.699999988079071
+			}
+		},
+		"CollisionData": "08dd6e123f01cde7e8aad02598b7b7c9"
+	},
+	{
+		"ID": "08dd6ecb177770af1dd0121e97e8dd61",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "08dd6ecb177571011dd0121d97e8dd59",
+		"Name": "TrashCan",
+		"Transform": {
+			"Scale": {
+				"X": 0.699999988079071,
+				"Y": 0.699999988079071,
+				"Z": 0.699999988079071
+			}
+		},
+		"Model": "08dd6e113a2b44ebd55124cad735f537",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "08dd6e9a088e423309865de3bdbd6584",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	}
+]
+}
