@@ -1705,6 +1705,37 @@
 		"Tags"
 	]
 }
+		},
+		{
+			"ID": "08dd6fb70957a4ef4d367c15e6aa2d21",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "a470726f441936acfe25318b162c336c",
+			"Name": "Road",
+			"Transform": {
+				"Translation": {
+					"X": 630.3374633789063,
+					"Y": 21.45624542236328,
+					"Z": 731.5513916015625
+				}
+			},
+			"Model": "08dd6fb7083ab5664c8f700fe023abbe",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "08dd6c5c2b7cd8b55779e39bd0a03c09",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "08dd6fb82a0c769d6471dac0cefd2547",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "08dd6fb70957a4ef4d367c15e6aa2d21",
+			"Name": "MeshCollider",
+			"CollisionData": "08dd6fb82a08682764719542cefa6e53"
 		}
 	]
 }
