@@ -156,6 +156,157 @@
 			"Tag": "Player"
 		},
 		{
+			"ID": "08dd6fa8296999c1c3feaab7861b21af",
+			"TypeName": "FlaxEngine.UICanvas",
+			"ParentID": "5543ed36412ccd0f04717a90d39e877e",
+			"Name": "UICanvas",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 0.0,
+					"Z": 100.0
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": -0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"V": {}
+		},
+		{
+			"ID": "08dd6fa8296a3831c3feab5d861b2836",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "08dd6fa8296999c1c3feaab7861b21af",
+			"Name": "Canvas Scalar",
+			"Control": "FlaxEngine.GUI.CanvasScaler",
+			"Data": {
+	"ResolutionCurve": {
+		"Keyframes": [
+			{
+				"Time": 480.0,
+				"Value": 0.444
+			},
+			{
+				"Time": 720.0,
+				"Value": 0.666
+			},
+			{
+				"Time": 1080.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 8640.0,
+				"Value": 8.0
+			}
+		]
+	},
+	"DpiCurve": {
+		"Keyframes": [
+			{
+				"Time": 1.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 96.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 200.0,
+				"Value": 2.0
+			},
+			{
+				"Time": 400.0,
+				"Value": 4.0
+			}
+		]
+	},
+	"Scaling": 0,
+	"ScaleFactor": 1.0,
+	"PhysicalUnit": 3,
+	"PhysicalUnitSize": 1.0,
+	"ResolutionMode": 0,
+	"ResolutionMin": {
+		"X": 640.0,
+		"Y": 480.0
+	},
+	"ResolutionMax": {
+		"X": 7680.0,
+		"Y": 4320.0
+	},
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"AnchorMax": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Offsets": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.0
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
+			"ID": "08dd6fa829f165ecc458ef0d89a1d1e2",
+			"TypeName": "FlaxEngine.TextRender",
+			"ParentID": "08dd6fa8296999c1c3feaab7861b21af",
+			"Name": "TextRender",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -48.0,
+					"Z": 0.0
+				},
+				"Scale": {
+					"X": 0.03999999910593033,
+					"Y": 0.04000000283122063,
+					"Z": 0.04000000283122063
+				}
+			},
+			"Text": "My Text",
+			"Color": {
+				"R": 1.0,
+				"G": 0.007608890533447266,
+				"B": 0.0,
+				"A": 1.0
+			},
+			"Size": 100.0,
+			"Material": "e72782bd4d898e2f236ca3be780438af",
+			"Font": "4508d98f4aa1f0bd59362b81d47e38f4",
+			"ShadowsMode": 0,
+			"DrawModes": 2
+		},
+		{
 			"ID": "75916c124fc96ed36dacddb54dfc631f",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "a470726f441936acfe25318b162c336c",
@@ -505,7 +656,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
+					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -524,26 +675,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
-					"SprungMassMultiplier": 1.0,
-					"SuspensionDampingRate": 1.0,
-					"SuspensionMaxRaise": 10.0,
-					"SuspensionMaxDrop": 10.0,
-					"SuspensionForceOffset": 0.0,
-					"TireLateralStiffness": 17.0,
-					"TireLateralMax": 2.0,
-					"TireLongitudinalStiffness": 1000.0,
-					"TireFrictionScale": 1.2000000476837159
-				},
-				{
-					"Mass": 20.0,
-					"Radius": 37.0,
-					"Width": 20.0,
-					"MaxSteerAngle": 0.0,
-					"DampingRate": 0.25,
-					"MaxBrakeTorque": 1500.0,
-					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
+					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -563,6 +695,25 @@
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
 					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
+					"SprungMassMultiplier": 1.0,
+					"SuspensionDampingRate": 1.0,
+					"SuspensionMaxRaise": 10.0,
+					"SuspensionMaxDrop": 10.0,
+					"SuspensionForceOffset": 0.0,
+					"TireLateralStiffness": 17.0,
+					"TireLateralMax": 2.0,
+					"TireLongitudinalStiffness": 1000.0,
+					"TireFrictionScale": 1.2000000476837159
+				},
+				{
+					"Mass": 20.0,
+					"Radius": 37.0,
+					"Width": 20.0,
+					"MaxSteerAngle": 0.0,
+					"DampingRate": 0.25,
+					"MaxBrakeTorque": 1500.0,
+					"MaxHandBrakeTorque": 2000.0,
+					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -982,6 +1133,15 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "b4c0ff684d5c4c3f19822d9e3d8c7abb",
+			"TypeName": "SuspensionInfo",
+			"ParentID": "08dd6c5c2ca4db2a57d7430bd445e759",
+			"V": {
+	"Vehicle": "08dd6bad0b592783a39d45a52534dc81",
+	"InfoText": "08dd6fa829f165ecc458ef0d89a1d1e2"
+}
 		},
 		{
 			"ID": "08dd6d4a28f4348e10222b4d515676f1",
