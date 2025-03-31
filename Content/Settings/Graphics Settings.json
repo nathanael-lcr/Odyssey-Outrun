@@ -7,7 +7,7 @@
 	"AAQuality": 1,
 	"SSRQuality": 1,
 	"SSAOQuality": 1,
-	"VolumetricFogQuality": 1,
+	"VolumetricFogQuality": 2,
 	"ShadowsQuality": 1,
 	"ShadowMapsQuality": 1,
 	"AllowCSMBlending": false,
@@ -33,7 +33,7 @@
 		},
 		"GI": {
 			"OverrideFlags": 0,
-			"Mode": 0,
+			"Mode": 1,
 			"Intensity": 1.0,
 			"BounceIntensity": 1.0,
 			"TemporalResponse": 0.9,
@@ -253,9 +253,9 @@
 			"BokehDepthCutoff": 1.5
 		},
 		"MotionBlur": {
-			"OverrideFlags": 1,
-			"Enabled": false,
-			"Scale": 0.5,
+			"OverrideFlags": 3,
+			"Enabled": true,
+			"Scale": 0.2,
 			"SampleCount": 10,
 			"MotionVectorsResolution": 2
 		},
