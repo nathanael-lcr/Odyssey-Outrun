@@ -31,7 +31,7 @@ To enable the **debug console** in-game:
 - [ ] AI-controlled racers
 - [ ] Multiplayer mode
 - [ ] Advanced car damage system
-- [ ] More tracks and environments
+- [ ] Bigger Map
 
 ## 🤝 Contributing
 Feel free to submit issues or pull requests to improve the game! 🚀
@@ -40,6 +40,6 @@ Feel free to submit issues or pull requests to improve the game! 🚀
 This project is **open-source** under the MIT License.
 
 ---
-🔗 Follow the development on [GitHub](https://github.com/yourusername/racing-game-flax).
+🔗 Follow the development on [Trello](https://github.com/yourusername/racing-game-flax).
 
 
