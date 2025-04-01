@@ -1338,15 +1338,15 @@
 			"Name": "Ramp",
 			"Transform": {
 				"Translation": {
-					"X": 1573.22607421875,
-					"Y": -29.152740478515626,
-					"Z": 330.94635009765627
+					"X": 1550.912841796875,
+					"Y": -14.816253662109375,
+					"Z": -993.146728515625
 				},
 				"Orientation": {
-					"X": 0.5,
+					"X": 0.5155643224716187,
 					"Y": 0.0,
 					"Z": 0.0,
-					"W": 0.8660253882408142
+					"W": 0.8568509221076965
 				},
 				"Scale": {
 					"X": 7.0,
@@ -2085,6 +2085,43 @@
 			"TypeName": "FlaxEngine.BoxCollider",
 			"ParentID": "0cb0aef84ffbe35f271db6950808598e",
 			"Name": "BoxCollider"
+		},
+		{
+			"ID": "08dd7114088918463d1861ed2cef199f",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "a470726f441936acfe25318b162c336c",
+			"Name": "TrackTest",
+			"Transform": {
+				"Translation": {
+					"X": 6745.18017578125,
+					"Y": 270.4013671875,
+					"Z": 1178.916015625
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": -0.6937368512153626,
+					"Z": 0.0,
+					"W": 0.7202285528182983
+				}
+			},
+			"Model": "08dd711407f3fc5a3c65f2b625f6b9d9",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "c6a123954153fde26cfcc6a01a4115f5",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "08dd711619b317236c7e852106eeac03",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "08dd7114088918463d1861ed2cef199f",
+			"Name": "MeshCollider",
+			"CollisionData": "08dd71161a5141646d23cd770d638a1c"
 		}
 	]
 }
