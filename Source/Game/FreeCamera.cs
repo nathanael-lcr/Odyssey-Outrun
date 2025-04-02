@@ -16,6 +16,7 @@ public class FreeCamera : Script
     private float _pitch;
     private float _yaw;
 
+
     /// <summary>
     /// Adds the rotation to the camera (as input).
     /// </summary>

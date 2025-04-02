@@ -89,7 +89,7 @@ public class CarController : Script
 
             // Mouse
             var mouseDelta = new Float2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * MouseSensitivity;
-            _pitch = Mathf.Clamp(_pitch + mouseDelta.Y, -88, 88);
+            _pitch = Mathf.Clamp(_pitch + mouseDelta.Y, -6, 88);
             _yaw += mouseDelta.X;
         }
     }

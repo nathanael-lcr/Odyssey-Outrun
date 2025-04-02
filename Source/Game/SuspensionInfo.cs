@@ -1,25 +1,21 @@
 ﻿using FlaxEngine;
+using FlaxEngine.GUI;
 
 public class SuspensionInfo : Script
 {
-    // Référence au véhicule et au TextRender
+    // Référence au véhicule
     public WheeledVehicle Vehicle;
-    public TextRender InfoText;
     
+    // Références aux labels
+    public UIControl GearLabel;
+    public UIControl SpeedLabel;
+
+    public UIControl fpsLabel;
+
     public override void OnUpdate()
     {
-        if (Vehicle == null || InfoText == null)
-            return;
-        
-        try
-        {
-            string info = $"gear : {Vehicle.CurrentGear}\n Speed : {(Mathf.Abs(Vehicle.ForwardSpeed * 3.6f)/100).ToString("F0")} km/h";
-            
-            InfoText.Text = info;
-        }
-        catch (System.Exception ex)
-        {
-            InfoText.Text = "Erreur: " + ex.Message;
-        }
+        GearLabel.Control = new Label{Text = Vehicle.CurrentGear.ToString("F0"), Scale = new Float2(1.3f, 1.3f)};
+        SpeedLabel.Control = new Label{Text = (Mathf.Abs(Vehicle.ForwardSpeed * 3.6f)/100).ToString("F0") + " Km/h", Scale = new Float2(1.3f, 1.3f)};
+        fpsLabel.Control = new Label{TextColor=Color.Green, Text=Engine.FramesPerSecond.ToString("F0") + "fps"};
     }
-}
+}   

@@ -8,12 +8,12 @@
 		"Bullet"
 	],
 	"Layers": [
+		"HUD",
 		"Default",
 		"Player",
 		"Bullets",
 		"CarBody",
 		"CarWheels",
-		null,
 		null,
 		null,
 		null,
