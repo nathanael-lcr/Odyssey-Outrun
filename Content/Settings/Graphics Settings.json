@@ -254,7 +254,7 @@
 		},
 		"MotionBlur": {
 			"OverrideFlags": 3,
-			"Enabled": false,
+			"Enabled": true,
 			"Scale": 0.5,
 			"SampleCount": 10,
 			"MotionVectorsResolution": 2

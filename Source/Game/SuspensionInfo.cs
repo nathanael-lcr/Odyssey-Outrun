@@ -7,14 +7,12 @@ public class SuspensionInfo : Script
     public WheeledVehicle Vehicle;
     
     // Références aux labels
-    public UIControl GearLabel;
     public UIControl SpeedLabel;
 
     public UIControl fpsLabel;
 
     public override void OnUpdate()
     {
-        GearLabel.Control = new Label{Text = Vehicle.CurrentGear.ToString("F0"), Scale = new Float2(1.3f, 1.3f)};
         SpeedLabel.Control = new Label{Text = (Mathf.Abs(Vehicle.ForwardSpeed * 3.6f)/100).ToString("F0") + " Km/h", Scale = new Float2(1.3f, 1.3f)};
         fpsLabel.Control = new Label{TextColor=Color.Green, Text=Engine.FramesPerSecond.ToString("F0") + "fps"};
     }

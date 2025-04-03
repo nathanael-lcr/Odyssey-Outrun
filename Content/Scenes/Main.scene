@@ -516,7 +516,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
+					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -535,26 +535,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
-					"SprungMassMultiplier": 1.0,
-					"SuspensionDampingRate": 1.0,
-					"SuspensionMaxRaise": 10.0,
-					"SuspensionMaxDrop": 10.0,
-					"SuspensionForceOffset": 0.0,
-					"TireLateralStiffness": 17.0,
-					"TireLateralMax": 2.0,
-					"TireLongitudinalStiffness": 1000.0,
-					"TireFrictionScale": 1.2000000476837159
-				},
-				{
-					"Mass": 20.0,
-					"Radius": 37.0,
-					"Width": 20.0,
-					"MaxSteerAngle": 0.0,
-					"DampingRate": 0.25,
-					"MaxBrakeTorque": 1500.0,
-					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
+					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -574,6 +555,25 @@
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
 					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
+					"SprungMassMultiplier": 1.0,
+					"SuspensionDampingRate": 1.0,
+					"SuspensionMaxRaise": 10.0,
+					"SuspensionMaxDrop": 10.0,
+					"SuspensionForceOffset": 0.0,
+					"TireLateralStiffness": 17.0,
+					"TireLateralMax": 2.0,
+					"TireLongitudinalStiffness": 1000.0,
+					"TireFrictionScale": 1.2000000476837159
+				},
+				{
+					"Mass": 20.0,
+					"Radius": 37.0,
+					"Width": 20.0,
+					"MaxSteerAngle": 0.0,
+					"DampingRate": 0.25,
+					"MaxBrakeTorque": 1500.0,
+					"MaxHandBrakeTorque": 2000.0,
+					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -630,6 +630,15 @@
 		"08dd6bad0ca95ec7a66cc89641505305",
 		"6d8391804f3bf12f7cbf108437622f7b"
 	]
+}
+		},
+		{
+			"ID": "5035651940b691bce17655b5a2bb4e03",
+			"TypeName": "Game.GearboxController",
+			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
+			"V": {
+	"vehicle": "08dd6bad0b592783a39d45a52534dc81",
+	"GearLabel": "08dd71e486f68d761eea292a43939416"
 }
 		},
 		{
@@ -1235,7 +1244,6 @@
 			"ParentID": "08dd71e2658e08cbf33222798e609166",
 			"V": {
 	"Vehicle": "08dd6bad0b592783a39d45a52534dc81",
-	"GearLabel": "08dd71e486f68d761eea292a43939416",
 	"SpeedLabel": "f4c7b2054b654453331c358b61eaebfe",
 	"fpsLabel": "0bd61b464eb127aca04e3dbb017a668e"
 }
@@ -1248,7 +1256,7 @@
 			"Transform": {
 				"Translation": {
 					"X": 1820.0,
-					"Y": 1060.0,
+					"Y": 1055.0,
 					"Z": 0.0
 				}
 			},
@@ -1306,7 +1314,7 @@
 	"Offsets": {
 		"Left": -100.0,
 		"Right": 100.0,
-		"Top": -20.0,
+		"Top": -25.0,
 		"Bottom": 20.0
 	},
 	"Scale": {
@@ -1341,8 +1349,8 @@
 			"Name": "SpeedLabel",
 			"Transform": {
 				"Translation": {
-					"X": 1802.0,
-					"Y": 1050.0,
+					"X": 1820.0,
+					"Y": 1040.0,
 					"Z": 0.0
 				}
 			},
@@ -1398,9 +1406,9 @@
 		"Y": 1.0
 	},
 	"Offsets": {
-		"Left": -118.0,
+		"Left": -100.0,
 		"Right": 100.0,
-		"Top": -30.0,
+		"Top": -40.0,
 		"Bottom": 20.0
 	},
 	"Scale": {
@@ -2491,6 +2499,41 @@
 			"ParentID": "08dd7114088918463d1861ed2cef199f",
 			"Name": "MeshCollider",
 			"CollisionData": "08dd71161a5141646d23cd770d638a1c"
+		},
+		{
+			"ID": "08dd72ba10fae53e40f90bc7916919ca",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "a470726f441936acfe25318b162c336c",
+			"Name": "Plane",
+			"Transform": {
+				"Translation": {
+					"X": 430.0074768066406,
+					"Y": 28.80315399169922,
+					"Z": -1034.58154296875
+				},
+				"Orientation": {
+					"X": -0.7071068286895752,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				},
+				"Scale": {
+					"X": 4.0,
+					"Y": 4.0,
+					"Z": 1.0
+				}
+			},
+			"Model": "54a1ff4a42af9f018234f7b39b1366b3",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "08dd72ba08e9dc343369acfb09ced02c",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
 		}
 	]
 }
