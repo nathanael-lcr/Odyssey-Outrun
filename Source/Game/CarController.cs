@@ -7,7 +7,7 @@ public class CarController : Script
     public WheeledVehicle Car;
     public Actor CameraTarget;
     public Camera Camera;
-    
+
     // References to wheel actors for position
     public Actor[] WheelActors = new Actor[4];
 
@@ -45,6 +45,18 @@ public class CarController : Script
     };
 
     public Actor[] WheelsPosition;
+
+    // Add these fields to your class
+    private float _shakeIntensity = 0f;
+    private float _shakeDuration = 0f;
+    private float _shakeDecay = 1.0f; // How quickly the shake effect fades
+    private System.Random _random = new System.Random();
+
+    // Add these fields to your class (if not already present)
+    private float _speedShakeThreshold = 80.0f; // Speed at which shake begins (adjust based on your game's scale)
+    private float _maxSpeedShake = 130.0f;      // Speed at which shake reaches maximum intensity
+    private float _baseSpeedShakeIntensity = 0.8f; // Base intensity of the speed shake
+    private float _lastSpeedShakeTime = 0f;    // To avoid applying shake every frame
 
     /// <summary>
     /// Adds the movement and rotation to the camera (as input).
@@ -99,10 +111,10 @@ public class CarController : Script
     {
         float wheelRadius = Car.Wheels[wheelIndex].Radius;
         float theoricalRotationSpeed = Mathf.Abs(Car.ForwardSpeed) / (2 * Mathf.Pi * wheelRadius);
-        
+
         float normalizedRotation = Mathf.Abs(wheelState.RotationAngle) / 1800 * 5 % 1f;
         float rotationRadians = normalizedRotation * 2 * Mathf.Pi;
-        
+
         CurrentAngles[wheelIndex] = rotationRadians;
         float vitesseAngulaire = (CurrentAngles[wheelIndex] - PrevAngles[wheelIndex]) / TempsEcoule;
         float vitesseAngulairerpm = Mathf.Abs(vitesseAngulaire) / (2 * Mathf.Pi);
@@ -124,21 +136,25 @@ public class CarController : Script
 
     public override void OnFixedUpdate()
     {
-        // Update camera
-        var camTrans = Camera.Transform;
-        var camFactor = Mathf.Saturate(CameraSmoothing * Time.DeltaTime);
-        CameraTarget.LocalOrientation = Quaternion.Lerp(CameraTarget.LocalOrientation, Quaternion.Euler(_pitch, _yaw, 0), camFactor);
-        camTrans.Translation = Vector3.Lerp(camTrans.Translation, CameraTarget.Position + CameraTarget.Direction * -CameraDistance, camFactor);
-        camTrans.Orientation = CameraTarget.Orientation;
-        Camera.Transform = camTrans;
+        UpdateCameraWithShake();
+        UpdateSpeedCameraShake(Mathf.Abs(Car.ForwardSpeed * 3.6f) / 100);
 
-        var inputH = Input.GetAxis("Horizontal") + _horizontal;
-        var inputV = Input.GetAxis("Vertical") + _vertical;
+        // Separate keyboard and controller input handling
+        float keyboardH = Input.GetAxis("Horizontal");
+        float keyboardV = Input.GetAxis("Vertical");
+        float controllerH = _horizontal; // Assuming this comes from controller
+        float controllerV = _vertical;   // Assuming this comes from controller
+
+        // Use the inputs (combined or with priority)
+        float inputH = keyboardH + controllerH;
+        float inputV = keyboardV + controllerV;
+
+        // Reset controller variables for next frame
         _horizontal = 0;
         _vertical = 0;
 
         var velocity = new Float3(inputH, 0.0f, inputV);
-        velocity.Normalize();
+        //velocity.Normalize();
 
         if (Input.GetKeyDown(KeyboardKeys.F1) && performanceMode == false)
         {
@@ -158,6 +174,12 @@ public class CarController : Script
         }
 
 
+        if (Input.GetKeyDown(KeyboardKeys.Return))
+        {
+            ApplyCameraShake(1f, 0.7f, 1.8f);
+        }
+
+
         Car.SetThrottle(velocity.Z);
         Car.SetSteering(velocity.X);
 
@@ -171,9 +193,6 @@ public class CarController : Script
             Car.SetHandbrake(0.0f);
             HandbrakePressed = false;
         }
-/* 
-        float speed = Car.ForwardSpeed * 3.6f;
-        float RPM = Car.EngineRotationSpeed; */
 
         // Get the screen dimensions
         Vector2 screenSize = Screen.Size;
@@ -201,7 +220,7 @@ public class CarController : Script
 
         // Draw second debug text line (above the first one)
         DebugDraw.DrawText(
-            "Frametime : " + (1000 /Engine.FramesPerSecond).ToString() + "ms",
+            "Frametime : " + (1000 / Engine.FramesPerSecond).ToString() + "ms",
             new Vector2(bottomRightPosition.X, bottomRightPosition.Y - 34), // 34 pixels up
             Color.Green,
             12,
@@ -222,20 +241,20 @@ public class CarController : Script
 
         // Calculate and display grip for each wheel
         string[] wheelNames = { "FL", "FR", "RL", "RR" }; // Front Left, Front Right, Rear Left, Rear Right
-        
+
         for (int i = 0; i < 4 && i < Car.Wheels.Length; i++)
         {
             float gripLevel = CalculateGripLevel(wheelStates[i], i);
-            
+
             // Only display if we have a reference to the wheel actor
             if (WheelActors[i] != null)
             {
                 // Get wheel position from the actor and add offset for better visibility
                 Vector3 textPosition = WheelActors[i].Position + WheelTextOffsets[i];
-                
+
                 // Color code based on grip level
                 Color textColor = gripLevel < 0.35f ? Color.Red : Color.Green;
-                
+
                 // Display the wheel grip with wheel identifier
                 DebugDraw.DrawText(
                     wheelNames[i] + ": " + gripLevel.ToString("F1"),
@@ -254,9 +273,9 @@ public class CarController : Script
                     30,
                     (i < 2 ? 1 : -1) * 100        // Front vs Rear
                 );
-                
+
                 Color textColor = gripLevel < 0.35f ? Color.Red : Color.Green;
-                
+
                 DebugDraw.DrawText(
                     wheelNames[i] + ": " + gripLevel.ToString("F1"),
                     WheelsPosition[i].Position,
@@ -270,7 +289,7 @@ public class CarController : Script
 
         // Display speed at the car position
         DebugDraw.DrawText(
-            (Mathf.Abs(Car.ForwardSpeed * 3.6f)/100).ToString("F1") + " km/h",
+            (Mathf.Abs(Car.ForwardSpeed * 3.6f) / 100).ToString("F1") + " km/h",
             Car.Position + new Vector3(0, 70, 0),
             Color.Blue,
             17,
@@ -287,5 +306,87 @@ public class CarController : Script
             0F,
             1F
         );
+    }
+
+    // Call this method to trigger camera shake
+    public void ApplyCameraShake(float intensity, float duration, float decay = 1.0f)
+    {
+        _shakeIntensity = Mathf.Max(_shakeIntensity, intensity);
+        _shakeDuration = Mathf.Max(_shakeDuration, duration);
+        _shakeDecay = decay;
+    }
+
+    // Modify your camera update code to include shake effect
+    private void UpdateCameraWithShake()
+    {
+        var camTrans = Camera.Transform;
+        var camFactor = Mathf.Saturate(CameraSmoothing * Time.DeltaTime);
+
+        // Apply normal camera movement
+        CameraTarget.LocalOrientation = Quaternion.Lerp(CameraTarget.LocalOrientation, Quaternion.Euler(_pitch, _yaw, 0), camFactor);
+
+        // Calculate base camera position
+        Vector3 basePosition = CameraTarget.Position + CameraTarget.Direction * -CameraDistance;
+
+        // Apply camera shake if active
+        Vector3 shakeOffset = Vector3.Zero;
+        if (_shakeDuration > 0)
+        {
+            // Generate random offset based on intensity
+            shakeOffset = new Vector3(
+                (float)(_random.NextDouble() * 2 - 1) * _shakeIntensity,
+                (float)(_random.NextDouble() * 2 - 1) * _shakeIntensity,
+                (float)(_random.NextDouble() * 2 - 1) * _shakeIntensity
+            );
+
+            // Reduce shake duration and intensity over time
+            _shakeDuration -= Time.DeltaTime;
+            _shakeIntensity = Mathf.Max(0, _shakeIntensity - (_shakeDecay * Time.DeltaTime));
+
+            if (_shakeDuration <= 0)
+            {
+                _shakeIntensity = 0;
+            }
+        }
+
+        // Apply normal movement plus shake
+        camTrans.Translation = Vector3.Lerp(camTrans.Translation, basePosition + shakeOffset, camFactor);
+        camTrans.Orientation = CameraTarget.Orientation;
+
+        // Apply rotation shake if desired (optional)
+        if (_shakeDuration > 0)
+        {
+            float rotationShake = _shakeIntensity * 0.5f; // Reduced factor for rotation
+            camTrans.Orientation *= Quaternion.Euler(
+                (float)(_random.NextDouble() * 2 - 1) * rotationShake,
+                (float)(_random.NextDouble() * 2 - 1) * rotationShake,
+                (float)(_random.NextDouble() * 2 - 1) * rotationShake
+            );
+        }
+
+        Camera.Transform = camTrans;
+    }
+
+    // Update method to check speed and apply shake
+    private void UpdateSpeedCameraShake(float currentSpeed)
+    {
+        // Only check for speed shake every 0.1 seconds to avoid constant small shakes
+        if (Time.GameTime > _lastSpeedShakeTime + 0.1f)
+        {
+            _lastSpeedShakeTime = Time.GameTime;
+
+            // If speed is above threshold, apply shake
+            if (currentSpeed > _speedShakeThreshold)
+            {
+                // Calculate shake intensity based on how far over the threshold we are
+                float speedFactor = Mathf.Clamp((currentSpeed - _speedShakeThreshold) /
+                                                 (_maxSpeedShake - _speedShakeThreshold), 0f, 1f);
+
+                float intensity = _baseSpeedShakeIntensity * speedFactor;
+
+                // Apply a short, continuous shake
+                ApplyCameraShake(intensity, 0.15f, 4.0f);
+            }
+        }
     }
 }

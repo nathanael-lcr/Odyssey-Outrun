@@ -158,9 +158,6 @@
 			"TypeName": "CameraFOVController",
 			"ParentID": "5543ed36412ccd0f04717a90d39e877e",
 			"V": {
-	"SpeedThreshold": 5.0,
-	"MaxFOV": 70.0,
-	"FOVIncreaseRate": 2.0,
 	"LerpSpeed": 1.0,
 	"TargetCamera": "5543ed36412ccd0f04717a90d39e877e",
 	"Vehicle": "08dd6bad0b592783a39d45a52534dc81"
@@ -501,32 +498,13 @@
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
-					"Y": 82.50066375732422,
+					"Y": 136.41555786132813,
 					"Z": 0.0
 				}
 			},
 			"OverrideMass": true,
 			"Mass": 2000.0,
 			"Wheels": [
-				{
-					"Mass": 20.0,
-					"Radius": 37.0,
-					"Width": 20.0,
-					"MaxSteerAngle": 50.0,
-					"DampingRate": 0.25,
-					"MaxBrakeTorque": 1500.0,
-					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
-					"SprungMassMultiplier": 1.0,
-					"SuspensionDampingRate": 1.0,
-					"SuspensionMaxRaise": 10.0,
-					"SuspensionMaxDrop": 10.0,
-					"SuspensionForceOffset": 0.0,
-					"TireLateralStiffness": 17.0,
-					"TireLateralMax": 2.0,
-					"TireLongitudinalStiffness": 1000.0,
-					"TireFrictionScale": 1.2000000476837159
-				},
 				{
 					"Mass": 20.0,
 					"Radius": 37.0,
@@ -550,11 +528,11 @@
 					"Mass": 20.0,
 					"Radius": 37.0,
 					"Width": 20.0,
-					"MaxSteerAngle": 0.0,
+					"MaxSteerAngle": 50.0,
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
+					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -574,6 +552,25 @@
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
 					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
+					"SprungMassMultiplier": 1.0,
+					"SuspensionDampingRate": 1.0,
+					"SuspensionMaxRaise": 10.0,
+					"SuspensionMaxDrop": 10.0,
+					"SuspensionForceOffset": 0.0,
+					"TireLateralStiffness": 17.0,
+					"TireLateralMax": 2.0,
+					"TireLongitudinalStiffness": 1000.0,
+					"TireFrictionScale": 1.2000000476837159
+				},
+				{
+					"Mass": 20.0,
+					"Radius": 37.0,
+					"Width": 20.0,
+					"MaxSteerAngle": 0.0,
+					"DampingRate": 0.25,
+					"MaxBrakeTorque": 1500.0,
+					"MaxHandBrakeTorque": 2000.0,
+					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -609,7 +606,9 @@
 				"MaxTorque": 700.0,
 				"MaxRotationSpeed": 7000.0
 			},
-			"Differential": {},
+			"Differential": {
+				"Type": 2
+			},
 			"Gearbox": {
 				"ForwardGearsRatios": 6
 			}
@@ -1056,7 +1055,7 @@
 					"W": -4.371138828673793e-8
 				}
 			},
-			"Layer": 3,
+			"Layer": 4,
 			"CollisionData": "08dd6c5f4e243b489abb3e207134bdbc"
 		},
 		{

@@ -46,9 +46,9 @@
 			}
 		},
 		"Bloom": {
-			"OverrideFlags": 0,
+			"OverrideFlags": 3,
 			"Enabled": true,
-			"Intensity": 1.0,
+			"Intensity": 0.5,
 			"Threshold": 3.0,
 			"BlurSigma": 4.0,
 			"Limit": 10.0
@@ -260,7 +260,7 @@
 			"MotionVectorsResolution": 2
 		},
 		"SSR": {
-			"OverrideFlags": 0,
+			"OverrideFlags": 33792,
 			"Intensity": 1.0,
 			"TraceMode": 0,
 			"DepthResolution": 2,

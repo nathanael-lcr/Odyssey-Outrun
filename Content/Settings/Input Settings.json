@@ -162,12 +162,12 @@
 		},
 		{
 			"Name": "Vertical",
-			"Axis": 4,
+			"Axis": 8,
 			"Gamepad": 0,
 			"PositiveButton": 0,
 			"NegativeButton": 0,
-			"GamepadPositiveButton": 0,
-			"GamepadNegativeButton": 0,
+			"GamepadPositiveButton": 12,
+			"GamepadNegativeButton": 11,
 			"DeadZone": 0.19,
 			"Sensitivity": 1.0,
 			"Gravity": 1.0,
@@ -185,7 +185,7 @@
 			"DeadZone": 0.19,
 			"Sensitivity": 1.0,
 			"Gravity": 1.0,
-			"Scale": 4.0,
+			"Scale": -4.0,
 			"Snap": false
 		},
 		{
@@ -201,6 +201,20 @@
 			"Gravity": 1.0,
 			"Scale": -4.0,
 			"Snap": false
+		},
+		{
+			"Name": "GamepadThrottle",
+			"Axis": 8,
+			"Gamepad": 0,
+			"PositiveButton": 0,
+			"NegativeButton": 0,
+			"GamepadPositiveButton": 12,
+			"GamepadNegativeButton": 0,
+			"DeadZone": 0.19,
+			"Sensitivity": 1.0,
+			"Gravity": 1.0,
+			"Scale": 1.0,
+			"Snap": true
 		}
 	]
 }

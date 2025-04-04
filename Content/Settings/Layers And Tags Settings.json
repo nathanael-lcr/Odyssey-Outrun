@@ -8,8 +8,8 @@
 		"Bullet"
 	],
 	"Layers": [
-		"HUD",
 		"Default",
+		"HUD",
 		"Player",
 		"Bullets",
 		"CarBody",

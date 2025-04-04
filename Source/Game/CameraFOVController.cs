@@ -2,100 +2,83 @@
 using FlaxEngine;
 
 /// <summary>
-/// Camera FOV controller that dynamically adjusts based on vehicle speed.
+/// Camera FOV controller that dynamically adjusts based on vehicle speed using a sigmoidal function.
+/// Ensures slow increase at low speeds and a rapid boost near 130 km/h.
 /// </summary>
 public class CameraFOVController : Script
 {
     [Header("FOV Settings")]
-    [Tooltip("The base/default field of view in degrees")]
     public float DefaultFOV = 60.0f;
+    public float MaxFOV = 80.0f;
 
-    [Tooltip("The speed threshold above which FOV starts to increase")]
-    public float SpeedThreshold = 80.0f;
-
-    [Tooltip("Maximum possible FOV in degrees")]
-    public float MaxFOV = 90.0f;
-
-    [Tooltip("How much to increase FOV per speed unit above the threshold")]
-    public float FOVIncreaseRate = 0.2f;
-
-    [Header("Lerping Settings")]
-    [Tooltip("How quickly FOV transitions (higher = faster)")]
+    [Tooltip("Contrôle la vitesse de transition vers le FOV cible.")]
     public float LerpSpeed = 3.0f;
 
-    [Header("References")]
-    [Tooltip("Reference to the camera (if null, will try to find on parent)")]
-    public Camera TargetCamera;
+    [Header("Speed Scaling")]
+    [Tooltip("Vitesse à laquelle le FOV commence à accélérer son augmentation.")]
+    public float SpeedMidpoint = 100.0f;
 
-    [Tooltip("Reference to the vehicle controller to get speed from")]
+    [Tooltip("Contrôle la pente de la montée rapide du FOV. Plus haut = transition plus brutale.")]
+    public float SpeedSharpness = 0.1f;
+
+    [Header("References")]
+    public Camera TargetCamera;
     public WheeledVehicle Vehicle;
 
-    // Method name to get speed from the vehicle controller
-    private const string SPEED_METHOD_NAME = "GetCurrentSpeed";
-
-    // Current FOV value
     private float _currentFOV;
     private float _targetFOV;
 
-    /// <inheritdoc/>
     public override void OnStart()
     {
-        // Find camera if not assigned
         if (TargetCamera == null)
         {
-            TargetCamera = Actor.GetChild<Camera>();
+            TargetCamera = Actor.GetChild<Camera>() ?? Actor.Parent?.GetChild<Camera>();
             if (TargetCamera == null)
             {
-                Debug.LogError("No camera found for FOV controller. Please assign a camera reference.");
+                Debug.LogError("Aucune caméra trouvée.");
                 Enabled = false;
                 return;
             }
         }
 
-        // Initialize with default FOV
+        if (Vehicle == null)
+        {
+            Debug.LogError("La référence 'Vehicle' n'est pas définie.");
+            Enabled = false;
+            return;
+        }
+
         _currentFOV = DefaultFOV;
-        _targetFOV = DefaultFOV;
         TargetCamera.FieldOfView = DefaultFOV;
     }
 
-    /// <inheritdoc/>
     public override void OnUpdate()
     {
-        // Get current speed from vehicle controller
         float currentSpeed = GetVehicleSpeed();
 
-        // Calculate target FOV based on speed
-        if (currentSpeed > SpeedThreshold)
-        {
-            float speedOverThreshold = currentSpeed - SpeedThreshold;
-            _targetFOV = Math.Min(DefaultFOV + (speedOverThreshold * FOVIncreaseRate), MaxFOV);
-        }
-        else
-        {
-            _targetFOV = DefaultFOV;
-        }
+        // --- Calcul du FOV avec courbe sigmoïde ---
+        float normalizedSpeed = (currentSpeed - SpeedMidpoint) * SpeedSharpness;
+        float sigmoidFactor = 1.0f / (1.0f + Mathf.Exp(-normalizedSpeed)); // Sigmoid function
 
-        // Smoothly interpolate to target FOV
-        _currentFOV = Mathf.Lerp(_currentFOV, _targetFOV, LerpSpeed * Time.DeltaTime);
+        _targetFOV = Mathf.Lerp(DefaultFOV, MaxFOV, sigmoidFactor);
 
-        // Apply FOV to camera
+        // --- Interpolation vers la valeur cible ---
+        float lerpFactor = Mathf.Clamp(LerpSpeed * Time.DeltaTime, 0f, 1f);
+        _currentFOV = Mathf.Lerp(_currentFOV, _targetFOV, lerpFactor);
         TargetCamera.FieldOfView = _currentFOV;
-
     }
 
     private float GetVehicleSpeed()
     {
-
-        // Try to call GetCurrentSpeed method on the vehicle controller
+        if (Vehicle == null) return 0.0f;
         try
         {
             return Mathf.Abs(Vehicle.ForwardSpeed * 3.6f) / 100;
         }
         catch (Exception ex)
         {
-            Debug.LogError($"Failed to get speed from vehicle controller: {ex.Message}");
+            Debug.LogError($"Erreur de récupération de vitesse : {ex.Message}");
+            return 0.0f;
         }
-
-        return 0.0f;
     }
 }
