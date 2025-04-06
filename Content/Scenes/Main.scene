@@ -603,14 +603,15 @@
 				]
 			},
 			"Engine": {
-				"MaxTorque": 700.0,
-				"MaxRotationSpeed": 7000.0
+				"MaxTorque": 600.0,
+				"MaxRotationSpeed": 8000.0
 			},
 			"Differential": {
 				"Type": 2
 			},
 			"Gearbox": {
-				"ForwardGearsRatios": 6
+				"ForwardGearsRatios": 6,
+				"ClutchStrength": 6.0
 			}
 		},
 		{
@@ -619,7 +620,6 @@
 			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
 			"V": {
 	"Car": "08dd6bad0b592783a39d45a52534dc81",
-	"CameraTarget": "08dd6baf22a6c14ee5c32ba6bab5b57e",
 	"Camera": "5543ed36412ccd0f04717a90d39e877e",
 	"CameraDistance": 600.0,
 	"MouseSensitivity": 0.2,
@@ -637,7 +637,8 @@
 			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
 			"V": {
 	"vehicle": "08dd6bad0b592783a39d45a52534dc81",
-	"GearLabel": "08dd71e486f68d761eea292a43939416"
+	"GearLabel": "08dd71e486f68d761eea292a43939416",
+	"finalDriveRatio": 1.0
 }
 		},
 		{

@@ -58,6 +58,8 @@ public class CarController : Script
     private float _baseSpeedShakeIntensity = 0.8f; // Base intensity of the speed shake
     private float _lastSpeedShakeTime = 0f;    // To avoid applying shake every frame
 
+    public float[] gearRatios = new float[] { -2.5f, 0f, 2.8f, 2.0f, 1.5f, 1.2f, 1.0f }; // R, N, 1, 2, 3, 4, 5
+
     /// <summary>
     /// Adds the movement and rotation to the camera (as input).
     /// </summary>
@@ -180,7 +182,7 @@ public class CarController : Script
         }
 
 
-        Car.SetThrottle(velocity.Z);
+        //Car.SetThrottle(velocity.Z);
         Car.SetSteering(velocity.X);
 
         if (Input.GetAction("Handbrake"))
