@@ -1072,7 +1072,7 @@
 			"V": {}
 		},
 		{
-			"ID": "49c70da242eab4809027d18781bb8bd5",
+			"ID": "fcbed3ec463635b019add4b3814615c7",
 			"TypeName": "Game.TimeOTDHandler",
 			"ParentID": "08dd71e3741e17bc07ec3d765da6f8df",
 			"V": {}
@@ -1134,7 +1134,7 @@
 			"Transform": {
 				"Translation": {
 					"X": 2.0,
-					"Y": 1.0,
+					"Y": 2.0,
 					"Z": 0.0
 				}
 			},
@@ -1206,8 +1206,8 @@
 	"Offsets": {
 		"Left": 2.0,
 		"Right": -2.0,
-		"Top": 1.0,
-		"Bottom": -1.0
+		"Top": 2.0,
+		"Bottom": -2.0
 	},
 	"Scale": {
 		"X": 1.0,
@@ -1615,7 +1615,7 @@
 	"fpsLabel": "0bd61b464eb127aca04e3dbb017a668e",
 	"RPMBar": "08dd75ce20e7442efa9889a5ec028bc0",
 	"Watch": "29859ad54fb2d357a191eaae68d80055",
-	"TimeHander": "49c70da242eab4809027d18781bb8bd5",
+	"TimeHander": "fcbed3ec463635b019add4b3814615c7",
 	"SpeedFont": {
 		"Font": "08dd75cd07fe33bcdffa3833e1d1b80a",
 		"Size": 30.0
@@ -1623,6 +1623,10 @@
 	"GearFont": {
 		"Font": "08dd75cd07fe33bcdffa3833e1d1b80a",
 		"Size": 20.0
+	},
+	"WatchFont": {
+		"Font": "08dd75cd07fe33bcdffa3833e1d1b80a",
+		"Size": 15.0
 	}
 }
 		},

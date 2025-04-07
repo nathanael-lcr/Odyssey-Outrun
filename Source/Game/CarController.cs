@@ -182,7 +182,7 @@ public class CarController : Script
         }
 
 
-        //Car.SetThrottle(velocity.Z);
+        Car.SetThrottle(velocity.Z);
         Car.SetSteering(velocity.X);
 
         if (Input.GetAction("Handbrake"))
