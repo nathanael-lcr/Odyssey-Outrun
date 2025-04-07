@@ -9,7 +9,7 @@ public class CarController : Script
     public Camera Camera;
 
     // References to wheel actors for position
-    public Actor[] WheelActors = new Actor[4];
+    private Actor[] WheelActors = new Actor[4];
 
     public float CameraSmoothing = 20.0f;
 

@@ -23,9 +23,9 @@
 	"GlobalSurfaceAtlasResolution": 2048,
 	"PostProcessSettings": {
 		"AO": {
-			"OverrideFlags": 0,
+			"OverrideFlags": 1,
 			"Enabled": true,
-			"Intensity": 0.8,
+			"Intensity": 1.0,
 			"Power": 0.75,
 			"Radius": 0.7,
 			"FadeOutDistance": 5000.0,
@@ -35,7 +35,7 @@
 			"OverrideFlags": 0,
 			"Mode": 1,
 			"Intensity": 1.0,
-			"BounceIntensity": 1.0,
+			"BounceIntensity": 2.0,
 			"TemporalResponse": 0.9,
 			"Distance": 20000.0,
 			"FallbackIrradiance": {
@@ -254,7 +254,7 @@
 		},
 		"MotionBlur": {
 			"OverrideFlags": 3,
-			"Enabled": true,
+			"Enabled": false,
 			"Scale": 0.5,
 			"SampleCount": 10,
 			"MotionVectorsResolution": 2
@@ -279,7 +279,7 @@
 			"TemporalResponse": 0.8
 		},
 		"AA": {
-			"OverrideFlags": 0,
+			"OverrideFlags": 1,
 			"Mode": 1,
 			"TAA_JitterSpread": 1.0,
 			"TAA_Sharpness": 0.1,
