@@ -181,6 +181,18 @@ public class CarController : Script
             ApplyCameraShake(1f, 0.7f, 1.8f);
         }
 
+/*         var engine = Car.Engine;
+
+        if (Input.GetKeyDown(KeyboardKeys.Control))
+        {
+            Debug.Log("Changed Power");
+            engine.MaxTorque = 200;
+            Car.Engine = engine;
+
+        }
+        
+        Car.Engine = engine;
+        Debug.Log(Car.Engine.MaxTorque); */
 
         Car.SetThrottle(velocity.Z);
         Car.SetSteering(velocity.X);

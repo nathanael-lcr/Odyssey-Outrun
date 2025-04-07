@@ -605,7 +605,7 @@
 			"UseAnalogSteering": true,
 			"Engine": {
 				"MaxTorque": 700.0,
-				"MaxRotationSpeed": 7000.0
+				"MaxRotationSpeed": 14000.0
 			},
 			"Differential": {
 				"Type": 2
