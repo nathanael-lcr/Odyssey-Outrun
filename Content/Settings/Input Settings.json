@@ -199,7 +199,7 @@
 			"DeadZone": 0.19,
 			"Sensitivity": 1.0,
 			"Gravity": 1.0,
-			"Scale": -4.0,
+			"Scale": -3.0,
 			"Snap": false
 		},
 		{
@@ -213,7 +213,7 @@
 			"DeadZone": 0.19,
 			"Sensitivity": 1.0,
 			"Gravity": 1.0,
-			"Scale": -4.0,
+			"Scale": -3.0,
 			"Snap": false
 		}
 	]
