@@ -509,7 +509,7 @@
 					"Mass": 20.0,
 					"Radius": 37.0,
 					"Width": 20.0,
-					"MaxSteerAngle": 53.0,
+					"MaxSteerAngle": 45.0,
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
@@ -528,7 +528,7 @@
 					"Mass": 20.0,
 					"Radius": 37.0,
 					"Width": 20.0,
-					"MaxSteerAngle": 53.0,
+					"MaxSteerAngle": 45.0,
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
@@ -690,12 +690,12 @@
 			"Name": "SphereCollider",
 			"Transform": {
 				"Translation": {
-					"X": -90.0,
-					"Y": -37.479835510253909,
+					"X": -86.41944122314453,
+					"Y": -39.23546600341797,
 					"Z": -125.77098083496094
 				}
 			},
-			"Layer": 3
+			"Layer": 5
 		},
 		{
 			"ID": "08dd6bae06e11f11c37f7621640c6312",
@@ -715,7 +715,7 @@
 					"Z": 1.0
 				}
 			},
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "223aa9894e90973780ab508621517526",
 			"Buffer": {
 				"Entries": [
@@ -732,11 +732,61 @@
 			"ID": "08dd6c5d2f6ca45b601d3d7f2701da16",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "08dd6bad0ca95ec7a66cc89641505305",
+			"IsActive": false,
 			"Name": "Wheel",
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "08dd6c5d2e77f50a5f164c911cbc4f15",
 			"Buffer": {
 				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "08dd7ac69ceb46a5e0c292c89c01ab27",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "08dd6bad0ca95ec7a66cc89641505305",
+			"Name": "FerrariWheels",
+			"Transform": {
+				"Translation": {
+					"X": 7.9548187255859379,
+					"Y": 0.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"Layer": 5,
+			"Model": "08dd7ac69bf34022e06a94d19891b9da",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
 					{
 						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
@@ -753,12 +803,12 @@
 			"Name": "SphereCollider 0",
 			"Transform": {
 				"Translation": {
-					"X": 90.0,
-					"Y": -37.479835510253909,
+					"X": 85.83209228515625,
+					"Y": -39.23546600341797,
 					"Z": -125.77098083496094
 				}
 			},
-			"Layer": 3
+			"Layer": 5
 		},
 		{
 			"ID": "08dd6bae08f99510c63b95127f65d9bf",
@@ -778,7 +828,7 @@
 					"Z": 1.0
 				}
 			},
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "223aa9894e90973780ab508621517526",
 			"Buffer": {
 				"Entries": [
@@ -795,6 +845,7 @@
 			"ID": "08dd6c5d30d096ae6202427739f4572b",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "6d8391804f3bf12f7cbf108437622f7b",
+			"IsActive": false,
 			"Name": "Wheel",
 			"Transform": {
 				"Orientation": {
@@ -804,10 +855,53 @@
 					"W": -4.371138828673793e-8
 				}
 			},
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "08dd6c5d2e77f50a5f164c911cbc4f15",
 			"Buffer": {
 				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "31f9db024ddd54dcebc0559decff735b",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "6d8391804f3bf12f7cbf108437622f7b",
+			"Name": "FerrariWheels 0",
+			"Transform": {
+				"Translation": {
+					"X": -7.852653503417969,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
+			"Layer": 5,
+			"Model": "08dd7ac69bf34022e06a94d19891b9da",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
 					{
 						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
@@ -824,12 +918,12 @@
 			"Name": "SphereCollider 1",
 			"Transform": {
 				"Translation": {
-					"X": -90.0,
-					"Y": -37.479835510253909,
-					"Z": 149.75045776367188
+					"X": -83.18312072753906,
+					"Y": -39.23546600341797,
+					"Z": 140.94065856933595
 				}
 			},
-			"Layer": 3
+			"Layer": 5
 		},
 		{
 			"ID": "08dd6bae091a639ec6666e168112581d",
@@ -849,7 +943,7 @@
 					"Z": 1.0
 				}
 			},
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "223aa9894e90973780ab508621517526",
 			"Buffer": {
 				"Entries": [
@@ -866,11 +960,61 @@
 			"ID": "08dd6c5d3268e6a264b4698e54ea6080",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "9b064f8c4c0966c1f185e1a1d2511777",
+			"IsActive": false,
 			"Name": "Wheel",
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "08dd6c5d2e77f50a5f164c911cbc4f15",
 			"Buffer": {
 				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "043ab9ed4239963af6051ca508a8eb2f",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9b064f8c4c0966c1f185e1a1d2511777",
+			"Name": "FerrariWheels 1",
+			"Transform": {
+				"Translation": {
+					"X": 7.827972412109375,
+					"Y": 0.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"Layer": 5,
+			"Model": "08dd7ac69bf34022e06a94d19891b9da",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
 					{
 						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
@@ -887,12 +1031,12 @@
 			"Name": "SphereCollider 2",
 			"Transform": {
 				"Translation": {
-					"X": 90.0,
-					"Y": -37.479835510253909,
-					"Z": 149.75045776367188
+					"X": 83.0871353149414,
+					"Y": -39.23546600341797,
+					"Z": 140.94065856933595
 				}
 			},
-			"Layer": 3
+			"Layer": 5
 		},
 		{
 			"ID": "08dd6bae093bb18bc689a9ae8272af82",
@@ -912,7 +1056,7 @@
 					"Z": 1.0
 				}
 			},
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "223aa9894e90973780ab508621517526",
 			"Buffer": {
 				"Entries": [
@@ -929,6 +1073,7 @@
 			"ID": "08dd6c5d32a52fa964d803b5564e6d53",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "785cdf2c4d5878d80006eca484b6f25f",
+			"IsActive": false,
 			"Name": "Wheel",
 			"Transform": {
 				"Orientation": {
@@ -938,7 +1083,7 @@
 					"W": -4.371138828673793e-8
 				}
 			},
-			"Layer": 3,
+			"Layer": 5,
 			"Model": "08dd6c5d2e77f50a5f164c911cbc4f15",
 			"Buffer": {
 				"Entries": [
@@ -952,9 +1097,246 @@
 			}
 		},
 		{
+			"ID": "909d227b4d81bc019d4f199ae707f51b",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "785cdf2c4d5878d80006eca484b6f25f",
+			"Name": "FerrariWheels 2",
+			"Transform": {
+				"Translation": {
+					"X": -7.7723541259765629,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
+			"Layer": 5,
+			"Model": "08dd7ac69bf34022e06a94d19891b9da",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "08dd790e07c765cd7e29198fd471d01e",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
+			"IsActive": false,
+			"Name": "Mustang 0",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -19.453750610351564,
+					"Z": 5.704975128173828
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"Model": "08dd77590877fa4d37b1bdd79b6156cc",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "08dd7ac44653daa4a911dde56f175528",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
+			"Name": "ferrariRoma",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -69.11085510253906,
+					"Z": 10.863731384277344
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"Model": "08dd7ac442af4e6fa8b6ef5e6b89fbf6",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
 			"ID": "08dd6c5c2ca4db2a57d7430bd445e759",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
+			"IsActive": false,
 			"Name": "CarModel",
 			"Transform": {
 				"Translation": {
@@ -1016,39 +1398,6 @@
 					}
 				]
 			}
-		},
-		{
-			"ID": "08dd6d4a28f4348e10222b4d515676f1",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "08dd6c5c2ca4db2a57d7430bd445e759",
-			"Name": "AudioController",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": 70.9544906616211,
-					"Z": 0.0
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": -1.0,
-					"Z": 0.0,
-					"W": -4.371138828673793e-8
-				}
-			}
-		},
-		{
-			"ID": "d49f5539485729ae8628c7b6ba473bb9",
-			"TypeName": "CarAudioController",
-			"ParentID": "08dd6d4a28f4348e10222b4d515676f1",
-			"V": {
-	"IdleSound": "08dd6d444f2798e5878d118bfb7766ab",
-	"EngineSound": "08dd6deb5b5c4051003370f983a424a3",
-	"Car": "08dd6bad0b592783a39d45a52534dc81",
-	"MinPitch": 0.2,
-	"BaseVolume": 1.0,
-	"MaxVolume": 2.0,
-	"VolumeResponseCurve": 3.0
-}
 		},
 		{
 			"ID": "08dd6c5f4e2cf4fb9abb8baa7137c52c",
@@ -1865,6 +2214,26 @@
 }
 		},
 		{
+			"ID": "08dd6d4a28f4348e10222b4d515676f1",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
+			"Name": "AudioController"
+		},
+		{
+			"ID": "d49f5539485729ae8628c7b6ba473bb9",
+			"TypeName": "CarAudioController",
+			"ParentID": "08dd6d4a28f4348e10222b4d515676f1",
+			"V": {
+	"IdleSound": "08dd6d444f2798e5878d118bfb7766ab",
+	"EngineSound": "08dd6deb5b5c4051003370f983a424a3",
+	"Car": "08dd6bad0b592783a39d45a52534dc81",
+	"MinPitch": 0.2,
+	"BaseVolume": 1.0,
+	"MaxVolume": 2.0,
+	"VolumeResponseCurve": 3.0
+}
+		},
+		{
 			"ID": "08dd6c581d08a863dd1704da088a2969",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "a470726f441936acfe25318b162c336c",
@@ -2342,9 +2711,9 @@
 			"Name": "TrashCan 0",
 			"Transform": {
 				"Translation": {
-					"X": -2533.259033203125,
+					"X": -2189.53515625,
 					"Y": 18.446739196777345,
-					"Z": -347.34515380859377
+					"Z": -293.10186767578127
 				}
 			}
 		},
@@ -3055,6 +3424,42 @@
 			"TypeName": "FlaxEngine.BoxCollider",
 			"ParentID": "6079c3304b93adca696bf78c447aaf23",
 			"Name": "BoxCollider"
+		},
+		{
+			"ID": "08dd77590936001337dee3649d24d1f3",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "a470726f441936acfe25318b162c336c",
+			"Name": "Mustang",
+			"Transform": {
+				"Translation": {
+					"X": -227.880615234375,
+					"Y": 49.06436538696289,
+					"Z": -811.4117431640625
+				}
+			},
+			"Model": "08dd77590877fa4d37b1bdd79b6156cc",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
 		}
 	]
 }
