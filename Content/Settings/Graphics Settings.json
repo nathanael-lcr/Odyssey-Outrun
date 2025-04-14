@@ -23,7 +23,7 @@
 	"GlobalSurfaceAtlasResolution": 2048,
 	"PostProcessSettings": {
 		"AO": {
-			"OverrideFlags": 1,
+			"OverrideFlags": 3,
 			"Enabled": true,
 			"Intensity": 1.0,
 			"Power": 0.75,
@@ -32,12 +32,12 @@
 			"FadeDistance": 500.0
 		},
 		"GI": {
-			"OverrideFlags": 1,
-			"Mode": 1,
+			"OverrideFlags": 9,
+			"Mode": 0,
 			"Intensity": 1.0,
 			"BounceIntensity": 2.0,
 			"TemporalResponse": 0.9,
-			"Distance": 20000.0,
+			"Distance": 30000.0,
 			"FallbackIrradiance": {
 				"R": 0.0,
 				"G": 0.0,
