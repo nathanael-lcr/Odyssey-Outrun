@@ -513,7 +513,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
+					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -532,7 +532,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
+					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -551,7 +551,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 20000.0,
-					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
+					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -570,7 +570,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 20000.0,
-					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
+					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -3436,6 +3436,80 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "08dd7ece0e8fa73c5e2a3298e6fee5c2",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "a470726f441936acfe25318b162c336c",
+			"Name": "TrackTestEnvironment",
+			"Transform": {
+				"Translation": {
+					"X": -3058.076904296875,
+					"Y": 45.3114013671875,
+					"Z": 5966.3583984375
+				},
+				"Orientation": {
+					"X": -0.015435060486197472,
+					"Y": -0.9912909269332886,
+					"Z": 0.010436514392495156,
+					"W": -0.13036586344242097
+				}
+			},
+			"Model": "08dd7ece0de191b85deed789e4ad5420",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "08dd7ed11b6c25cb9dba7d9a62a54f11",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "08dd7ece0e8fa73c5e2a3298e6fee5c2",
+			"Name": "EnvironnementCollider",
+			"CollisionData": "08dd7ec413de625f82227a8375128146"
+		},
+		{
+			"ID": "b34ba25a4605fbfabe9777a7469238bf",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "a470726f441936acfe25318b162c336c",
+			"Name": "Floor 0",
+			"Transform": {
+				"Scale": {
+					"X": 1000.0,
+					"Y": 0.20000000298023225,
+					"Z": 1000.0
+				}
+			},
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "c5bf75264ac08f205d16eea554e3d16e",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "4b08fc084fc15cb933f958a8581b2f27",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "b34ba25a4605fbfabe9777a7469238bf",
+			"Name": "BoxCollider",
+			"StaticFlags": 0
 		}
 	]
 }
