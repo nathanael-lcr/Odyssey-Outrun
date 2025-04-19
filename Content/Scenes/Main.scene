@@ -164,6 +164,18 @@
 }
 		},
 		{
+			"ID": "aeef4dc64a56c339606c60a7b76e5082",
+			"TypeName": "CameraRollEffect",
+			"ParentID": "5543ed36412ccd0f04717a90d39e877e",
+			"V": {
+	"TargetCamera": "5543ed36412ccd0f04717a90d39e877e",
+	"Vehicle": "08dd6bad0b592783a39d45a52534dc81",
+	"CameraTarget": "08dd6baf22a6c14ee5c32ba6bab5b57e",
+	"MaxRollAngle": 7.0,
+	"MinRollSpeed": 60.0
+}
+		},
+		{
 			"ID": "75916c124fc96ed36dacddb54dfc631f",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "a470726f441936acfe25318b162c336c",
@@ -513,7 +525,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
+					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -532,7 +544,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 2000.0,
-					"Collider": "785cdf2c4d5878d80006eca484b6f25f",
+					"Collider": "9b064f8c4c0966c1f185e1a1d2511777",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -551,7 +563,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 20000.0,
-					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
+					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
@@ -570,7 +582,7 @@
 					"DampingRate": 0.25,
 					"MaxBrakeTorque": 1500.0,
 					"MaxHandBrakeTorque": 20000.0,
-					"Collider": "08dd6bad0ca95ec7a66cc89641505305",
+					"Collider": "6d8391804f3bf12f7cbf108437622f7b",
 					"SprungMassMultiplier": 1.0,
 					"SuspensionDampingRate": 1.0,
 					"SuspensionMaxRaise": 10.0,
