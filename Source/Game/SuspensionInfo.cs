@@ -34,7 +34,6 @@ public class SuspensionInfo : Script
             Text = (Mathf.Abs(Vehicle.ForwardSpeed * 3.6f) / 100).ToString("F0"),
             Width = 40f,
             Height = 60f,
-            Size = new Float2(100.3f, 100.3f),
             Font = SpeedFont
 
         };
@@ -44,6 +43,7 @@ public class SuspensionInfo : Script
             TextColor = Color.Green,
             Text = Engine.FramesPerSecond.ToString("F0") + "fps",
         };
+
 
         if (Vehicle.EngineRotationSpeed > Vehicle.Engine.MaxRotationSpeed - 800)
         {

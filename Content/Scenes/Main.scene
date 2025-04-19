@@ -1388,15 +1388,15 @@
 			}
 		},
 		{
-			"ID": "08dd6c5f4e2cf4fb9abb8baa7137c52c",
+			"ID": "08dd7f4c1095024718bf2bf1a77531ae",
 			"TypeName": "FlaxEngine.MeshCollider",
 			"ParentID": "08dd6bad0b592783a39d45a52534dc81",
 			"Name": "MeshCollider",
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
-					"Y": -70.9544906616211,
-					"Z": 0.0
+					"Y": -69.11085510253906,
+					"Z": 10.863731384277344
 				},
 				"Orientation": {
 					"X": 0.0,
@@ -1406,7 +1406,7 @@
 				}
 			},
 			"Layer": 4,
-			"CollisionData": "08dd6c5f4e243b489abb3e207134bdbc"
+			"CollisionData": "08dd7f4c108986b018be5897a76cf019"
 		},
 		{
 			"ID": "08dd71e3741e17bc07ec3d765da6f8df",
@@ -1587,15 +1587,100 @@
 }
 		},
 		{
-			"ID": "f4c7b2054b654453331c358b61eaebfe",
+			"ID": "08dd7f4236bd118e1b0f7991be2cd1bd",
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "08dd71e3741f724607ec41585da71fb9",
+			"Name": "Speedometer",
+			"Transform": {
+				"Translation": {
+					"X": 896.3759765625,
+					"Y": 403.80206298828127,
+					"Z": 0.0
+				}
+			},
+			"Control": "FlaxEngine.GUI.Image",
+			"Data": {
+	"Brush": {
+		"$type": "FlaxEngine.GUI.TextureBrush, FlaxEngine.CSharp",
+		"Texture": "08dd7f4961d4f738c538f44e63d502c6",
+		"Filter": 1
+	},
+	"Margin": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"Color": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"MouseOverColor": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"DisabledTint": {
+		"R": 0.5019608,
+		"G": 0.5019608,
+		"B": 0.5019608,
+		"A": 1.0
+	},
+	"KeepAspectRatio": true,
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"AnchorMax": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Offsets": {
+		"Left": -183.62402,
+		"Right": 150.0,
+		"Top": -203.69794,
+		"Bottom": 200.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.0
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
+			"ID": "f4c7b2054b654453331c358b61eaebfe",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "08dd7f4236bd118e1b0f7991be2cd1bd",
 			"Name": "SpeedLabel",
 			"Transform": {
 				"Translation": {
-					"X": 928.0,
-					"Y": 517.5,
-					"Z": 7.275957614183426e-12
+					"X": 55.0,
+					"Y": 100.0,
+					"Z": 1.1368683772161603e-11
 				}
 			},
 			"Control": "FlaxEngine.GUI.Label",
@@ -1642,17 +1727,17 @@
 	"ClipChildren": true,
 	"CullChildren": true,
 	"AnchorMin": {
-		"X": 1.0,
-		"Y": 1.0
+		"X": 0.5,
+		"Y": 0.5
 	},
 	"AnchorMax": {
-		"X": 1.0,
-		"Y": 1.0
+		"X": 0.5,
+		"Y": 0.5
 	},
 	"Offsets": {
-		"Left": -152.0,
+		"Left": -20.0,
 		"Right": 40.0,
-		"Top": -90.0,
+		"Top": 0.0,
 		"Bottom": 60.0
 	},
 	"Scale": {
@@ -1660,8 +1745,8 @@
 		"Y": 1.0
 	},
 	"Pivot": {
-		"X": 1.0,
-		"Y": 1.0
+		"X": 0.5,
+		"Y": 0.5
 	},
 	"Shear": {
 		"X": 0.0,
@@ -1683,13 +1768,13 @@
 		{
 			"ID": "08dd71e486f68d761eea292a43939416",
 			"TypeName": "FlaxEngine.UIControl",
-			"ParentID": "08dd71e3741f724607ec41585da71fb9",
+			"ParentID": "08dd7f4236bd118e1b0f7991be2cd1bd",
 			"Name": "GearLabel",
 			"Transform": {
 				"Translation": {
-					"X": 986.0,
-					"Y": 562.5,
-					"Z": -7.275957614183426e-12
+					"X": 25.0,
+					"Y": 81.0,
+					"Z": -9.094947017729282e-13
 				}
 			},
 			"Control": "FlaxEngine.GUI.Label",
@@ -1736,18 +1821,18 @@
 	"ClipChildren": true,
 	"CullChildren": true,
 	"AnchorMin": {
-		"X": 1.0,
-		"Y": 1.0
+		"X": 0.5,
+		"Y": 0.5
 	},
 	"AnchorMax": {
-		"X": 1.0,
-		"Y": 1.0
+		"X": 0.5,
+		"Y": 0.5
 	},
 	"Offsets": {
-		"Left": -94.0,
+		"Left": -50.0,
 		"Right": 50.0,
-		"Top": -45.0,
-		"Bottom": 20.0
+		"Top": -19.0,
+		"Bottom": 50.0
 	},
 	"Scale": {
 		"X": 1.0,
@@ -1781,8 +1866,8 @@
 			"Name": "RPMHUD",
 			"Transform": {
 				"Translation": {
-					"X": 893.5902099609375,
-					"Y": 486.607666015625,
+					"X": 853.2811889648438,
+					"Y": 479.37286376953127,
 					"Z": 0.0
 				}
 			},
@@ -1818,9 +1903,9 @@
 		"Y": 1.0
 	},
 	"Offsets": {
-		"Left": -186.40979,
+		"Left": -226.71881,
 		"Right": 30.0,
-		"Top": -120.892334,
+		"Top": -128.12714,
 		"Bottom": 100.0
 	},
 	"Scale": {
@@ -1970,11 +2055,11 @@
 	"TimeHander": "fcbed3ec463635b019add4b3814615c7",
 	"SpeedFont": {
 		"Font": "08dd75cd07fe33bcdffa3833e1d1b80a",
-		"Size": 30.0
+		"Size": 22.0
 	},
 	"GearFont": {
 		"Font": "08dd75cd07fe33bcdffa3833e1d1b80a",
-		"Size": 20.0
+		"Size": 40.0
 	},
 	"WatchFont": {
 		"Font": "08dd75cd07fe33bcdffa3833e1d1b80a",
@@ -3465,6 +3550,11 @@
 					"Y": -0.9912909269332886,
 					"Z": 0.010436514392495156,
 					"W": -0.13036586344242097
+				},
+				"Scale": {
+					"X": 1.100000023841858,
+					"Y": 1.100000023841858,
+					"Z": 1.100000023841858
 				}
 			},
 			"Model": "08dd7ece0de191b85deed789e4ad5420",
