@@ -2,6 +2,9 @@
 
 A high-speed arcade-style racing game built with **Flax Engine**. Featuring realistic yet dynamic driving physics, responsive controls, and immersive environments.
 
+![odyssey-outrun](https://github.com/user-attachments/assets/6db4dba1-b427-4baa-9268-fc196f1bef40)
+
+
 ## 🎮 Features
 - 🏎️ **Smooth Driving Physics** – Inspired by GTA IV, with soft suspension and body roll for a fun experience.
 - 🌍 **Dynamic Tracks** – Various race tracks with unique environments and challenges.
